@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "Calculadora de Imposto Aduaneiro",
+  "version": "1.0",
+  "description": "Mostra opções de preço com impostos ao passar sobre preços.",
+  "permissions": ["activeTab", "storage"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  }
+}
